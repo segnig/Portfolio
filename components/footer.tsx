@@ -1,12 +1,12 @@
 "use client"
 
-import { Github, Linkedin, Twitter, Mail, Heart } from "lucide-react"
+import { Github, Linkedin, MessageCircle, Mail, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const socialLinks = [
   { name: "GitHub", href: "https://github.com/segnig", icon: Github },
   { name: "LinkedIn", href: "https://linkedin.com/in/validresults", icon: Linkedin },
-  { name: "Twitter", href: "https://twitter.com", icon: Twitter },
+  { name: "Telegram", href: "https://t.me/Valid_result", icon: MessageCircle },
   { name: "Email", href: "mailto:segnigirma11@gmail.com", icon: Mail },
 ]
 
