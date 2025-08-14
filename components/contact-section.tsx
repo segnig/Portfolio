@@ -88,8 +88,8 @@ export function ContactSection() {
       return
     }
 
-    console.log('📝 Contact form submitted!')
-    console.log('📋 Form Data:', formData)
+    console.log('Contact form submitted!')
+    console.log('Form Data:', formData)
     
     // Reset status and set to sending
     setEmailStatus('sending')
@@ -98,20 +98,20 @@ export function ContactSection() {
 
     try {
       // Use the email service to send the email
-      console.log('📤 Calling EmailService.sendEmail...')
+      console.log('Calling EmailService.sendEmail...')
       const result = await EmailService.sendEmail(formData as ContactFormData)
-      console.log('📡 EmailService result:', result)
+      console.log('EmailService result:', result)
 
       if (result.success) {
-        console.log('✅ Email sent successfully!')
+        console.log('Email sent successfully!')
         
         // Check if it was sent via API or fallback
         if (result.message.includes("Email sent successfully")) {
           setEmailStatus('success')
-          setStatusMessage("✅ Email sent successfully! I'll get back to you soon.")
+          setStatusMessage("Email sent successfully! I'll get back to you soon.")
         } else {
           setEmailStatus('fallback')
-          setStatusMessage("📧 Opened your email client. Please send the message manually.")
+          setStatusMessage("Opened your email client. Please send the message manually.")
         }
         
         toast({
@@ -121,7 +121,7 @@ export function ContactSection() {
         
         // Clear form on success
         setFormData({ name: "", email: "", subject: "", message: "" })
-        console.log('🧹 Form cleared successfully')
+        console.log('Form cleared successfully')
         
         // Auto-reset status after 5 seconds for success
         if (result.message.includes("Email sent successfully")) {
@@ -131,9 +131,9 @@ export function ContactSection() {
           }, 5000)
         }
       } else {
-        console.error('❌ Email sending failed:', result.message)
+        console.error('Email sending failed:', result.message)
         setEmailStatus('failed')
-        setStatusMessage("❌ Failed to send email. Please try again or contact me directly.")
+        setStatusMessage("Failed to send email. Please try again or contact me directly.")
         
         toast({
           title: "Failed to send message",
@@ -142,9 +142,9 @@ export function ContactSection() {
         })
       }
     } catch (error) {
-      console.error("❌ Email submission error:", error)
+      console.error("Email submission error:", error)
       setEmailStatus('failed')
-      setStatusMessage("❌ An unexpected error occurred. Please try again or contact me directly.")
+      setStatusMessage("An unexpected error occurred. Please try again or contact me directly.")
       
       toast({
         title: "Error",
@@ -153,7 +153,7 @@ export function ContactSection() {
       })
     } finally {
       setIsSubmitting(false)
-      console.log('🏁 Form submission process completed')
+      console.log('Form submission process completed')
     }
   }
 
@@ -268,13 +268,26 @@ export function ContactSection() {
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
                   )}
                   {emailStatus === 'success' && (
-                    <div className="text-green-600 text-xl">✅</div>
+                    <div className="text-green-600">
+                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                   )}
                   {emailStatus === 'fallback' && (
-                    <div className="text-yellow-600 text-xl">📧</div>
+                    <div className="text-yellow-600">
+                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                      </svg>
+                    </div>
                   )}
                   {emailStatus === 'failed' && (
-                    <div className="text-red-600 text-xl">❌</div>
+                    <div className="text-red-600">
+                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                   )}
                   <div className="font-medium">
                     {statusMessage}

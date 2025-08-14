@@ -26,12 +26,12 @@ export async function POST(request: NextRequest) {
     // Send email using Gmail with Nodemailer
     try {
       // Check if Gmail is configured
-      console.log('🔍 Checking Gmail configuration...')
-      console.log('📧 GMAIL_USER:', process.env.GMAIL_USER ? '✅ Set' : '❌ Not set')
-      console.log('🔑 GMAIL_APP_PASSWORD:', process.env.GMAIL_APP_PASSWORD ? '✅ Set' : '❌ Not set')
+      console.log('Checking Gmail configuration...')
+      console.log('GMAIL_USER:', process.env.GMAIL_USER ? 'Set' : 'Not set')
+      console.log('GMAIL_APP_PASSWORD:', process.env.GMAIL_APP_PASSWORD ? 'Set' : 'Not set')
       
       if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-        console.log('⚠️ Gmail not configured, falling back to console logging')
+        console.log('Gmail not configured, falling back to console logging')
         
         // Fallback: Log email content
         const emailContent = {
@@ -53,12 +53,12 @@ export async function POST(request: NextRequest) {
           `
         }
         
-        console.log('📧 EMAIL LOGGED (Gmail not configured):')
-        console.log('✅ Recipient:', emailContent.to)
-        console.log('✅ From:', emailContent.from)
-        console.log('✅ Subject:', emailContent.subject)
-        console.log('✅ Message Length:', emailContent.message.length, 'characters')
-        console.log('✅ Timestamp:', new Date().toISOString())
+        console.log('EMAIL LOGGED (Gmail not configured):')
+        console.log('Recipient:', emailContent.to)
+        console.log('From:', emailContent.from)
+        console.log('Subject:', emailContent.subject)
+        console.log('Message Length:', emailContent.message.length, 'characters')
+        console.log('Timestamp:', new Date().toISOString())
         
         return NextResponse.json({
           success: true,
@@ -113,17 +113,17 @@ export async function POST(request: NextRequest) {
         replyTo: email // So you can reply directly to the sender
       }
 
-      console.log('📤 Attempting to send email via Gmail...')
-      console.log('📧 To:', recipientEmail)
-      console.log('📧 From:', mailOptions.from)
-      console.log('📧 Subject:', mailOptions.subject)
+      console.log('Attempting to send email via Gmail...')
+      console.log('To:', recipientEmail)
+      console.log('From:', mailOptions.from)
+      console.log('Subject:', mailOptions.subject)
 
       const info = await transporter.sendMail(mailOptions)
       
-      console.log('📧 EMAIL SENT SUCCESSFULLY via Gmail!')
-      console.log('✅ Message ID:', info.messageId)
-      console.log('✅ Response:', info.response)
-      console.log('✅ Timestamp:', new Date().toISOString())
+      console.log('EMAIL SENT SUCCESSFULLY via Gmail!')
+      console.log('Message ID:', info.messageId)
+      console.log('Response:', info.response)
+      console.log('Timestamp:', new Date().toISOString())
 
       return NextResponse.json({
         success: true,
@@ -131,7 +131,7 @@ export async function POST(request: NextRequest) {
       })
 
     } catch (gmailError) {
-      console.error('❌ Gmail error:', gmailError)
+      console.error('Gmail error:', gmailError)
       
       // Fallback: Log email content
       const emailContent = {
@@ -153,12 +153,12 @@ export async function POST(request: NextRequest) {
         `
       }
       
-      console.log('📧 EMAIL LOGGED (Gmail failed):')
-      console.log('✅ Recipient:', emailContent.to)
-      console.log('✅ From:', emailContent.from)
-      console.log('✅ Subject:', emailContent.subject)
-      console.log('✅ Message Length:', emailContent.message.length, 'characters')
-      console.log('✅ Timestamp:', new Date().toISOString())
+      console.log('EMAIL LOGGED (Gmail failed):')
+      console.log('Recipient:', emailContent.to)
+      console.log('From:', emailContent.from)
+      console.log('Subject:', emailContent.subject)
+      console.log('Message Length:', emailContent.message.length, 'characters')
+      console.log('Timestamp:', new Date().toISOString())
       
       return NextResponse.json({
         success: true,

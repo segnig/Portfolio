@@ -25,9 +25,9 @@ export class EmailService {
    */
   static async sendEmailWithAPI(formData: ContactFormData): Promise<EmailResponse> {
     try {
-      console.log('📤 Attempting to send email via API...')
-      console.log('📝 Form Data:', formData)
-      console.log('📧 Recipient Email:', this.RECIPIENT_EMAIL)
+      console.log('Attempting to send email via API...')
+      console.log('Form Data:', formData)
+      console.log('Recipient Email:', this.RECIPIENT_EMAIL)
 
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -40,25 +40,25 @@ export class EmailService {
         }),
       })
 
-      console.log('📡 API Response Status:', response.status)
-      console.log('📡 API Response OK:', response.ok)
+      console.log('API Response Status:', response.status)
+      console.log('API Response OK:', response.ok)
 
       const result = await response.json()
-      console.log('📡 API Response Data:', result)
+      console.log('API Response Data:', result)
 
       if (response.ok && result.success) {
-        console.log('✅ Email sent successfully via API!')
+        console.log('Email sent successfully via API!')
         return {
           success: true,
           message: "Email sent successfully! I'll get back to you soon."
         }
       } else {
-        console.error('❌ API returned error:', result.message)
+        console.error('API returned error:', result.message)
         throw new Error(result.message || 'Failed to send email')
       }
 
     } catch (error) {
-      console.error("❌ API email sending failed:", error)
+      console.error("API email sending failed:", error)
       return {
         success: false,
         message: "Failed to send email. Please try again or contact me directly.",
@@ -72,8 +72,8 @@ export class EmailService {
    * This is a backup option if other methods fail
    */
   static openEmailClient(formData: ContactFormData): void {
-    console.log('📧 Opening email client as fallback...')
-    console.log('📝 Preparing email with data:', formData)
+    console.log('Opening email client as fallback...')
+    console.log('Preparing email with data:', formData)
     
     const subject = encodeURIComponent(formData.subject)
     const body = encodeURIComponent(
@@ -81,34 +81,34 @@ export class EmailService {
     )
     
     const mailtoLink = `mailto:${this.RECIPIENT_EMAIL}?subject=${subject}&body=${body}`
-    console.log('🔗 Mailto Link:', mailtoLink)
+    console.log('Mailto Link:', mailtoLink)
     
     window.open(mailtoLink, '_blank')
-    console.log('✅ Email client opened successfully!')
+    console.log('Email client opened successfully!')
   }
 
   /**
    * Main method to send email - tries multiple approaches
    */
   static async sendEmail(formData: ContactFormData): Promise<EmailResponse> {
-    console.log('🚀 Starting email sending process...')
-    console.log('📧 Target Email:', this.RECIPIENT_EMAIL)
-    console.log('📝 Form Data:', formData)
+    console.log('Starting email sending process...')
+    console.log('Target Email:', this.RECIPIENT_EMAIL)
+    console.log('Form Data:', formData)
     
     // Try API endpoint first
-    console.log('🔄 Attempting API method...')
+    console.log('Attempting API method...')
     let result = await this.sendEmailWithAPI(formData)
     
     if (result.success) {
-      console.log('🎉 Email sent successfully via API!')
+      console.log('Email sent successfully via API!')
       return result
     }
 
     // If API fails, open email client as fallback
-    console.log('⚠️ API method failed, trying email client fallback...')
+    console.log('API method failed, trying email client fallback...')
     this.openEmailClient(formData)
     
-    console.log('📧 Fallback method completed - email client opened')
+    console.log('Fallback method completed - email client opened')
     return {
       success: true,
       message: "Opened your email client. Please send the message manually."
