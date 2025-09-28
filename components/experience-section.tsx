@@ -7,6 +7,26 @@ import { AnimatedSection } from "@/components/animated-section"
 
 const experiences = [
   {
+    id: 4,
+    title: "Zindi Ambassador for Ethiopia",
+    company: "Zindi Africa",
+    location: "Ethiopia (Pan-African Network)",
+    period: "Sep 2025 - Present",
+    type: "Volunteer Leadership",
+    description: "Selected as Zindi Ambassador for Ethiopia to lead AI and machine learning initiatives at grassroots level. Part of a pan-African network of AI leaders responsible for creating awareness, organizing events, and supporting the next generation of data scientists across Africa. Coordinating university ambassadors, organizing hackathons, and connecting Zindi with potential partners and datasets.",
+    achievements: [
+      "Selected as official Zindi Ambassador representing Ethiopia in pan-African AI network",
+      "Providing feedback to improve Zindi platform for African data scientists"
+    ],
+    technologies: [
+      "AI/ML Community Building", 
+      "Event Management", 
+      "Hackathon Organization",
+      "Data Science Education", 
+      "Pan-African Networking"
+    ]
+  },
+  {
     id: 1,
     title: "Back End Engineer",
     company: "Eskalate",

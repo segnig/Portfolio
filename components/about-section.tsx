@@ -25,15 +25,19 @@ export function AboutSection() {
           {/* Profile Image */}
           <div className="flex justify-center md:justify-end">
             <div className="relative group">
-              <div className="w-64 h-64 rounded-2xl bg-gradient-to-br from-muted to-muted-foreground/20 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:scale-105">
+              <div className="w-full h-auto max-w-64 sm:max-w-80 md:max-w-96 rounded-2xl bg-gradient-to-br from-muted to-muted-foreground/20 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:scale-105">
+              <img
+                src="/segni-girma.JPG"
+                alt="Segni Girma - Software Engineer and Data Scientist"
+                className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+              <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 group-hover:border-primary">
                 <img
-                  src="/segni-girma-profile.png"
-                  alt="Segni Girma - Software Engineer and Data Scientist"
-                  className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
+                  src="/my-logo.png"
+                  alt="Segni Girma"
+                  className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
                 />
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-primary rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
-                <span className="text-primary-foreground font-bold text-lg">SG</span>
               </div>
             </div>
           </div>

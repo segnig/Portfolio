@@ -45,7 +45,7 @@ const certificates: Certificate[] = [
   id: 1,
   title: "Data Fundamentals with Capstone Project",
   description: "Credential demonstrating foundational knowledge of data analytics, data science methodologies, and visualization tools.",
-  image: "/data-fundamentals-with-capstone-project.png", // Replace with actual image path
+  image: "/certificates/data-fundamentals-with-capstone-project.png", // Replace with actual image path
   issuer: "IBM SkillsBuild",
   date: "Aug 2025",
   credentialUrl: "https://www.credly.com/badges/c21b9e03-c2c0-4c81-8036-2aa5bde697ea/public_url", // Insert actual credential verification link
@@ -78,7 +78,7 @@ const certificates: Certificate[] = [
   title: "Applied Data Science Lab",
   description:
     "Completed eight end-to-end applied data science projects, demonstrating proficiency in accessing, cleaning, and preparing data, building machine learning models, and communicating results effectively.",
-  image: "/applied-data-science-lab.2.png", // Replace with actual image path
+  image: "/certificates/applied-data-science-lab.2.png", // Replace with actual image path
   issuer: "WorldQuant University",
   date: "Oct 2024",
   credentialUrl: "https://your-badge-link-here", // Insert actual credential verification link
@@ -110,7 +110,7 @@ const certificates: Certificate[] = [
   title: "Data Fundamentals",
   description:
     "Intermediate-level credential demonstrating proficiency in data analytics concepts, methodologies, and applications of data science, including cleaning, refining, and visualizing data with IBM Watson Studio.",
-  image: "data-fundamentals.png", // Replace with actual image path
+  image: "/certificates/data-fundamentals.png", // Replace with actual image path
   issuer: "IBM SkillsBuild",
   date: "Aug 2025",
   credentialUrl: "https://www.credly.com/badges/81c0cbd3-e0ed-4a89-b1b1-92dc60561296/public_url", // Insert actual credential verification link
@@ -141,7 +141,7 @@ const certificates: Certificate[] = [
   title: "Python For Data Science In 2025 A-Z: EDA With Real Exercises",
   description:
     "Completed a 16-hour Udemy course covering Python programming for data science, with a focus on exploratory data analysis (EDA) using real-world exercises.",
-  image: "/python-for-data-science.jpg", // Replace with actual image path
+  image: "/certificates/python-for-data-science.jpg", // Replace with actual image path
   issuer: "Udemy",
   date: "Apr 2025",
   credentialUrl: "https://www.udemy.com/certificate/UC-e5db9b13-f7b7-4734-8aab-eed41001513e/",
@@ -168,6 +168,52 @@ const certificates: Certificate[] = [
       "Strengthened ability to analyze and visualize data in Python, enabling more effective decision-making in data-driven projects."
   }
 },
+{
+  id: 6,
+  title: "10 Academy AI and Data Engineering Training Program",
+  description: "A comprehensive 3-month project-based training in data engineering, machine learning, generative AI, and deployment technologies",
+  image: "/certificates/10academy-training.png",
+  issuer: "10 Academy & Kifiya Financial Technology",
+  date: "sept 2025", // You would replace with actual completion date
+  credentialUrl: "https://10academy.org/verify-certificate",
+  skills: [
+    // Data Engineering
+    "Data Cleaning", "ETL Frameworks", "ELT Frameworks", "Big Data Manipulation", 
+    "DBT Transformation", "Infrastructure Automation",
+    "Data Warehousing",
+    
+    // Programming
+    "Advanced Python", "Advanced SQL", "JavaScript",
+    
+    // Generative AI
+    "Chatbot Development", "Context Engineering", 
+    "Retrieval-Augmented Generation (RAG)", "LLM Fine-tuning", "LLM Evaluation",
+    
+    // Deployment
+    "Docker", "GitHub", "CI/CD", "Unit Testing", "Model Deployment", 
+    "Application Deployment", "Dashboard Building",
+    
+    // Machine Learning
+    "Exploratory Data Analysis", "Statistical Modeling", "Predictive Modeling",
+    "Time Series Analysis", "Deep Learning", "MLOps", "DVC", "MLFlow",
+    
+  ],
+  details: {
+    overview: "An intensive 12-week project-based training program focused on practical skills in data engineering, machine learning, generative AI, and modern deployment technologies. The program emphasizes hands-on experience with real-world projects and professional development.",
+    
+    highlights: [
+      "Comprehensive 3-month (12-week) project-based training curriculum",
+      "Covered cutting-edge technologies including Generative AI and RAG systems",
+      "Practical experience with Docker, CI/CD, and cloud deployment",
+      "Professional development in enterprise work culture and communication",
+      "Direct mentorship from industry experts and founders",
+      "Focus on both technical excellence and career readiness",
+      "End-to-end project experience from data processing to deployment"
+    ],
+    
+    impact: "This program provides comprehensive preparation for roles in data engineering, machine learning, and AI development. Graduates gain practical skills in modern data stacks, AI deployment, and professional workplace competencies, making them job-ready for high-demand positions in the tech industry."
+  }
+}
 
 ]
 
@@ -176,7 +222,7 @@ const achievements: Achievement[] = [
     id: 1,
     title: "Eighth Place – 2024 ICPC Ethiopian Collegiate Programming Contest",
     description: "Awarded for competitive programming skills at the collegiate level",
-    image: "/icpc-ethiopia-2024.png", // Replace with actual image path
+    image: "Achievements/icpc-ethiopia-2024.png", // Replace with actual image path
     issuer: "International Collegiate Programming Contest (ICPC)",
     date: "Oct 28-29, 2024",
     category: "Competitive Programming",
@@ -197,7 +243,7 @@ const achievements: Achievement[] = [
     id: 3,
     title: "African Credit Scoring Challenge",
     description: "Ranked 19th out of 900 participants in a financial data prediction competition",
-    image: "/african-credit-scoring-challenge.png", // replace with actual path
+    image: "Achievements/african-credit-scoring-challenge.png", // replace with actual path
     issuer: "Zindi",
     date: "Jan 13, 2025",
     category: "Data Science Competition",
@@ -218,7 +264,7 @@ const achievements: Achievement[] = [
    id: 4,
    title: "21st Place – International Women's Day Challenge 2025",
    description: "Predicted women-headed households living below an income threshold in a data science competition",
-   image: "/valid-International Women's Day Challenge.png",
+   image: "Achievements/valid-International Women's Day Challenge.png",
    issuer: "Zindi Africa",
    date: "Mar 7–31, 2025",
    category: "Data Science & Predictive Modeling",

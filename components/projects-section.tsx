@@ -9,11 +9,73 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { AnimatedSection } from "@/components/animated-section"
 
 const projects = [
+   {
+    id: 5,
+    title: "ShopAlly - AI-Powered Shopping Assistant",
+    description: "Distributed microservices architecture with Golang backend, LLM integration, MongoDB, and visual search capabilities",
+    image: "/projects/shopally-shopping-assistant.png",
+    tech: [
+      "Golang", "Gin Framework", "LLM", "Distributed Systems", "Microservices", 
+      "MongoDB", "Docker","Redis", "Next.js", "Flutter", "WebSocket", "REST API"
+    ],
+    github: "https://github.com/A2SV/g6-shopally",
+    demo: "https://shop-ally-ai.vercel.app",
+    likes: 0,
+    views: 0,
+    date: "2025",
+    details: {
+      overview: "As Backend Team Lead, architected and implemented a distributed microservices system using Golang, Gin framework, and MongoDB. Leveraged MongoDB's flexible document model for product catalogs and user data while integrating LLM capabilities for intelligent features.",
+      features: [
+        "Microservices architecture with Golang and Gin framework",
+        "MongoDB document database for product catalog and user profiles",
+        "LLM-powered product recommendations and search",
+        "MongoDB aggregation framework for complex analytics",
+        "Distributed image processing for visual search",
+        "gRPC for high-performance service communication",
+        "Change streams for real-time data updates",
+        "Database sharding for horizontal scalability",
+        "JWT authentication and authorization middleware",
+        "Distributed tracing and monitoring integration"
+      ],
+      impact: "Improved system performance by 40% with Golang microservices, reduced complex query times by 60% using MongoDB aggregation pipelines, successfully scaled to handle 1M+ requests daily, and accelerated feature development by 35% with MongoDB's flexible schema design."
+    },
+    backendRole: {
+      role: "Backend Team Lead & Golang Engineer",
+      teamSize: 14,
+      responsibilities: [
+        "Architected distributed microservices system using Golang and MongoDB",
+        "Designed MongoDB schema and aggregation pipelines for complex queries",
+        "Led backend team in implementing Gin framework APIs with MongoDB",
+        "Integrated LLM models for intelligent product features",
+        "Implemented MongoDB change streams for real-time updates",
+        "Optimized database performance with indexing and query optimization",
+        "Designed and implemented distributed systems patterns",
+        "Established MongoDB best practices and data modeling standards"
+      ],
+      technologies: {
+        languages: ["Golang", "MongoDB Query Language", "Python"],
+        frameworks: ["Gin", "gRPC", "MongoDB Go Driver", "Viper"],
+        databases: ["MongoDB", "Redis"],
+        infrastructure: ["Docker", "GitHub Actions"],
+        architectures: ["Microservices", "Distributed Systems", "Event-Driven", "Document Database"]
+      },
+      achievements: [
+        "Reduced API latency from 500ms to 120ms using Golang optimization",
+        "Improved query performance by 60% with MongoDB aggregation pipelines",
+        "Implemented LLM integration that improved recommendation accuracy by 35%",
+        "Designed MongoDB sharding strategy that supported 10M+ product records",
+        "Reduced development time by 35% with MongoDB's flexible schema",
+        "Implemented real-time features using MongoDB change streams",
+        "Achieved 99.9% database availability with replica sets",
+        "Reduced infrastructure costs by 30% through efficient MongoDB scaling"
+      ]
+    }
+  },
   {
     id: 1,
     title: "Telegram Health Data Analytics Pipeline",
     description: "Data engineering pipeline extracting and analyzing health product data from Ethiopian medical Telegram channels",
-    image: "/telegram-pipeline.png",
+    image: "/projects/telegram-pipeline.png",
     tech: ["Python", "Telethon", "PostgreSQL", "dbt", "YOLOv8", "FastAPI", "Dagster", "Docker"],
     github: "https://github.com/segnig/From-Raw-Telegram-Data-to-an-Analytical-API",
     demo: "https://github.com/segnig/From-Raw-Telegram-Data-to-an-Analytical-API",
@@ -36,7 +98,7 @@ const projects = [
     id: 2,
     title: "Event Driven Oil Analysis",
     description: "Analyzes how geopolitical and economic events impact Brent crude oil prices using Bayesian Change Point Detection.",
-    image: "/oil-analysis-dashboard.jpg",
+    image: "/projects/oil-analysis-dashboard.jpg",
     tech: ["Python", "PyMC3", "Flask", "React", "Pandas", "Matplotlib"],
     github: "https://github.com/segnig/Events-driven-oil-analysis",
     demo: "https://github.com/segnig/Events-driven-oil-analysis",
@@ -59,7 +121,7 @@ const projects = [
     id: 3,
     title: "CrediTrust AI Complaint-Answering Chatbot",
     description: "RAG system transforming consumer complaint data into actionable insights for CrediTrust Financial.",
-    image: "/credit-trust-camplaint-assistant.webp",
+    image: "/projects/credit-trust-camplaint-assistant.webp",
     tech: ["Python", "LangChain", "ChromaDB", "Gradio", "OpenAI API"],
     github: "https://github.com/segnig/crediTrust-chatbot",
     demo: "https://github.com/segnig/crediTrust-chatbot",
@@ -82,7 +144,7 @@ const projects = [
     id: 4,
     title: "Fraud Detection Project",
     description: "Machine learning pipeline for detecting fraudulent transactions in credit card and e-commerce datasets.",
-    image: "/fraud-detection-project.webp",
+    image: "/projects/fraud-detection-project.webp",
     tech: ["Python", "scikit-learn", "LightGBM", "CatBoost", "Neural Networks", "SHAP", "Pandas", "Matplotlib"],
     github: "https://github.com/segnig/ml4fraud-ecommerce-banking",
     demo: "https://github.com/segnig/ml4fraud-ecommerce-banking",

@@ -20,7 +20,7 @@ const blogPosts = [
     tags: ["AI", "RAG", "FinTech", "Complaint Analysis"],
     author: "Segni Girma",
     href: "#",
-    image: "/credit-trust-camplaint-assistant.webp",
+    image: "/blogs/credit-trust-camplaint-assistant.webp",
     readTime: "5 min read",
     featured: true,
   },
@@ -35,7 +35,7 @@ const blogPosts = [
     tags: ["Data Science", "Insurance", "Risk Analysis", "Marketing"],
     author: "Segni Girma",
     href: "#",
-    image: "/Optimizing-Car-Insurance-Marketing-with-Data-Driven-Risk-Insights.webp",
+    image: "/blogs/Optimizing-Car-Insurance-Marketing-with-Data-Driven-Risk-Insights.webp",
     featured: true
   }
 ]
