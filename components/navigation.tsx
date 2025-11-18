@@ -49,11 +49,11 @@ export function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 w-full z-40 bg-background/60 backdrop-blur-md border-b border-border">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-primary/20 transition-all duration-300 hover:scale-110 hover:rotate-12 hover:border-primary animate-scale-hover"
+          className="relative w-15 h-15 rounded-full overflow-hidden border-2 border-primary/20 transition-all duration-300 hover:scale-110 hover:rotate-12 hover:border-primary animate-scale-hover"
         >
           <img
             src="/my-logo.png"

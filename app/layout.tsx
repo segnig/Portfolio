@@ -10,6 +10,8 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
+
+
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
@@ -18,10 +20,15 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Segni Girma- Software Engineer & Data Scientist",
-  description: "Minimalist portfolio showcasing software engineering and Data Science expertise",
-  generator: "v0.app",
+  description: "I'm Segni Girma, a passionate Software Engineer and Data Scientist dedicated to crafting innovative solutions through code and data analysis. Explore my projects, blog, and connect with me to learn more about my work in technology and data science.",
+  
+  // make icon rounded
+  icons: {
+    icon: "/my-logo.png",
+    shortcut: "/fmy-logo.png",
+    apple: "/my-logo.png",
+  },
 }
-
 
 
 export default function RootLayout({

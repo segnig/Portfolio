@@ -42,13 +42,62 @@ type Achievement = {
 
 const certificates: Certificate[] = [
 {
+  id: 7,
+  title: "Applied AI Lab: Deep Learning for Computer Vision",
+  description:
+    "Completed six end-to-end PyTorch computer vision projects covering image classification, object detection, generative AI, and deep learning model development.",
+  image: "/certificates/applied-ai-lab-deep-learning-computer-vision.png",
+  issuer: "WorldQuant University",
+  date: "Nov 2025",
+  credentialUrl: "https://www.credly.com/badges/56d9f63b-12ab-4f47-a345-4d99cca8b710/public_url", 
+  skills: [
+    "Artificial Intelligence (AI)",
+    "Data Science",
+    "Deep Learning",
+    "Neural Networks",
+    "PyTorch",
+    "Machine Learning",
+    "Image Classification",
+    "Object Detection",
+    "Image Generation",
+    "Transformers",
+    "Generative Adversarial Networks (GANs)",
+    "Stable Diffusion",
+    "YOLOv8",
+    "OpenCV",
+    "HuggingFace Transformers",
+    "HuggingFace Diffusers",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Scikit-learn",
+    "Flask",
+    "Streamlit",
+    "Facial Recognition"
+  ],
+  details: {
+    overview:
+      "Earners of this badge completed six end-to-end PyTorch computer vision projects involving data preparation, cleaning, and transformation pipelines, and mastering deep learning models such as MLPs, CNNs, and transformers. Projects included image classification, object detection, generative AI, and ethical considerations in AI.",
+    highlights: [
+      "Built image classification models for wildlife conservation using neural networks",
+      "Developed crop disease detection models using CNNs with transfer learning and callbacks",
+      "Implemented real-time object detection systems for traffic monitoring using YOLOv8",
+      "Performed face detection and recognition using MTCNN and Inception-ResNet, deployed via Flask",
+      "Created synthetic medical images using GAN architectures and built Streamlit apps",
+      "Developed and deployed a Stable Diffusion–powered meme generator for marketing"
+    ],
+    impact:
+      "Gained advanced practical experience in computer vision, deep learning, and deployment. Strengthened ability to build, debug, optimize, and ethically evaluate AI systems for real-world applications."
+  }
+},
+{
   id: 1,
   title: "Data Fundamentals with Capstone Project",
   description: "Credential demonstrating foundational knowledge of data analytics, data science methodologies, and visualization tools.",
-  image: "/certificates/data-fundamentals-with-capstone-project.png", // Replace with actual image path
+  image: "/certificates/data-fundamentals-with-capstone-project.png",
   issuer: "IBM SkillsBuild",
   date: "Aug 2025",
-  credentialUrl: "https://www.credly.com/badges/c21b9e03-c2c0-4c81-8036-2aa5bde697ea/public_url", // Insert actual credential verification link
+  credentialUrl: "https://www.credly.com/badges/c21b9e03-c2c0-4c81-8036-2aa5bde697ea/public_url", 
   skills: [
     "Clean Data",
     "Data Analysis",
@@ -78,10 +127,10 @@ const certificates: Certificate[] = [
   title: "Applied Data Science Lab",
   description:
     "Completed eight end-to-end applied data science projects, demonstrating proficiency in accessing, cleaning, and preparing data, building machine learning models, and communicating results effectively.",
-  image: "/certificates/applied-data-science-lab.2.png", // Replace with actual image path
+  image: "/certificates/applied-data-science-lab.2.png",
   issuer: "WorldQuant University",
   date: "Oct 2024",
-  credentialUrl: "https://your-badge-link-here", // Insert actual credential verification link
+  credentialUrl: "https://www.credly.com/badges/f592fd5d-9a21-4bf8-8033-909f82f62850/public_url", 
   skills: [
     "API Design",
     "Data Science",
@@ -110,10 +159,10 @@ const certificates: Certificate[] = [
   title: "Data Fundamentals",
   description:
     "Intermediate-level credential demonstrating proficiency in data analytics concepts, methodologies, and applications of data science, including cleaning, refining, and visualizing data with IBM Watson Studio.",
-  image: "/certificates/data-fundamentals.png", // Replace with actual image path
+  image: "/certificates/data-fundamentals.png",
   issuer: "IBM SkillsBuild",
   date: "Aug 2025",
-  credentialUrl: "https://www.credly.com/badges/81c0cbd3-e0ed-4a89-b1b1-92dc60561296/public_url", // Insert actual credential verification link
+  credentialUrl: "https://www.credly.com/badges/81c0cbd3-e0ed-4a89-b1b1-92dc60561296/public_url",
   skills: [
     "Clean Data",
     "Data Analysis",
@@ -141,7 +190,7 @@ const certificates: Certificate[] = [
   title: "Python For Data Science In 2025 A-Z: EDA With Real Exercises",
   description:
     "Completed a 16-hour Udemy course covering Python programming for data science, with a focus on exploratory data analysis (EDA) using real-world exercises.",
-  image: "/certificates/python-for-data-science.jpg", // Replace with actual image path
+  image: "/certificates/python-for-data-science.jpg",
   issuer: "Udemy",
   date: "Apr 2025",
   credentialUrl: "https://www.udemy.com/certificate/UC-e5db9b13-f7b7-4734-8aab-eed41001513e/",
@@ -174,7 +223,7 @@ const certificates: Certificate[] = [
   description: "A comprehensive 3-month project-based training in data engineering, machine learning, generative AI, and deployment technologies",
   image: "/certificates/10academy-training.png",
   issuer: "10 Academy & Kifiya Financial Technology",
-  date: "sept 2025", // You would replace with actual completion date
+  date: "sept 2025", 
   credentialUrl: "https://10academy.org/verify-certificate",
   skills: [
     // Data Engineering
@@ -222,7 +271,7 @@ const achievements: Achievement[] = [
     id: 1,
     title: "Eighth Place – 2024 ICPC Ethiopian Collegiate Programming Contest",
     description: "Awarded for competitive programming skills at the collegiate level",
-    image: "Achievements/icpc-ethiopia-2024.png", // Replace with actual image path
+    image: "Achievements/icpc-ethiopia-2024.png", 
     issuer: "International Collegiate Programming Contest (ICPC)",
     date: "Oct 28-29, 2024",
     category: "Competitive Programming",
@@ -243,7 +292,7 @@ const achievements: Achievement[] = [
     id: 3,
     title: "African Credit Scoring Challenge",
     description: "Ranked 19th out of 900 participants in a financial data prediction competition",
-    image: "Achievements/african-credit-scoring-challenge.png", // replace with actual path
+    image: "Achievements/african-credit-scoring-challenge.png",
     issuer: "Zindi",
     date: "Jan 13, 2025",
     category: "Data Science Competition",
