@@ -402,7 +402,7 @@ const achievements: Achievement[] = [
    id: 4,
    title: "21st Place – International Women's Day Challenge 2025",
    description: "Predicted women-headed households living below an income threshold in a data science competition",
-   image: "/Achievements/valid-International Women's Day Challenge.png",
+   image: "/Achievements/valid-international-womens-day-challenge.png",
    issuer: "Zindi Africa",
    date: "Mar 7–31, 2025",
    category: "Data Science & Predictive Modeling",

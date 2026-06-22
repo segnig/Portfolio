@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Space_Grotesk } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "@/components/ui/toaster"
 import "./globals.css"
 
 const inter = Inter({
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   // make icon rounded
   icons: {
     icon: "/my-logo.png",
-    shortcut: "/fmy-logo.png",
+    shortcut: "/my-logo.png",
     apple: "/my-logo.png",
   },
 }
@@ -44,7 +45,10 @@ export default function RootLayout({
         }} />
       </head>
       <body className="antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   )
