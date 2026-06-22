@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react"
+import { Github, Linkedin, Mail, ArrowDown, Code2, Trophy } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const socialLinks = [
@@ -18,6 +18,16 @@ const socialLinks = [
     name: "Email",
     href: "mailto:segnigirma11@gmail.com",
     icon: Mail,
+  },
+  {
+    name: "LeetCode",
+    href: "https://leetcode.com/u/valid_result/",
+    icon: Code2,
+  },
+  {
+    name: "Codeforces",
+    href: "https://codeforces.com/profile/valid_result",
+    icon: Trophy,
   },
 ]
 

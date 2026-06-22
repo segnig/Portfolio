@@ -4,7 +4,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import { AnimatedCounter } from "@/components/animated-counter"
 
 export function AboutSection() {
-  const highlights = ["3+ years experience", "WQU Alumni Ambassador", "Backend development", "ML/AI expertise", "Community mentor", "Data-driven solutions"]
+  const highlights = ["3+ years experience", "WQU Alumni Ambassador", "892+ LeetCode problems", "Backend development", "ML/AI expertise", "Community mentor"]
 
   const stats = [
     { label: "Projects Completed", value: 50, suffix: "+" },

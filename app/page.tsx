@@ -9,6 +9,7 @@ import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { CertificateAchievementSection } from "@/components/certificate-achievement-section"
+import { CompetitiveProgrammingSection } from "@/components/competitive-programming-section"
 
 export default function Portfolio() {
   return (
@@ -21,6 +22,7 @@ export default function Portfolio() {
         <AboutSection />
         <CertificateAchievementSection />
         <SkillsSection />
+        <CompetitiveProgrammingSection />
         <ProjectsSection />
         <ExperienceSection />
         <BlogSection />        

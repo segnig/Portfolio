@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Mail, Phone, MapPin, Send, Github, Linkedin, } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Code2, Trophy } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -48,6 +48,16 @@ const socialLinks = [
     name: "Telegram",
     href: "https://t.me/Valid_result",
     icon: Send,
+  },
+  {
+    name: "LeetCode",
+    href: "https://leetcode.com/u/valid_result/",
+    icon: Code2,
+  },
+  {
+    name: "Codeforces",
+    href: "https://codeforces.com/profile/valid_result",
+    icon: Trophy,
   },
 ]
 
