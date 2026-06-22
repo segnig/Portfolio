@@ -11,6 +11,21 @@ import { useState } from "react"
 
 const blogPosts = [
   {
+    id: 3,
+    title: "From Bootcamp Best to A2SVian of the Year: A Journey of Resilience and Results",
+    excerpt: "Honored as First Best A2SVian of the Year (2025) at ASTU — leading ShopAlly's backend team and earning triple recognition for excellence, problem-solving, and commitment.",
+    contentUrl: "https://www.linkedin.com/posts/validresults_a2sv-softwareengineering-backenddevelopment-activity-7411377741888962560-0VLz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFcTFmoBU0wkr3HV9KaJL328t2zrMVcFR6Y",
+    source: "https://www.linkedin.com/posts/validresults_a2sv-softwareengineering-backenddevelopment-activity-7411377741888962560-0VLz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFcTFmoBU0wkr3HV9KaJL328t2zrMVcFR6Y",
+    date: "2026-01-20",
+    tags: ["A2SV", "Leadership", "Backend Development", "Competitive Programming"],
+    author: "Segni Girma",
+    href: "https://www.linkedin.com/posts/validresults_a2sv-softwareengineering-backenddevelopment-activity-7411377741888962560-0VLz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFcTFmoBU0wkr3HV9KaJL328t2zrMVcFR6Y",
+    image: "/certificates/a2sv-best-a2svian-of-the-year-2025.jpg",
+    readTime: "3 min read",
+    featured: true,
+    platform: "LinkedIn",
+  },
+  {
     id: 1,
     title: "Introduction: From Manual Pain to AI-Powered Gain",
     excerpt: "How we built a Retrieval-Augmented Generation (RAG) chatbot for CrediTrust’s FinTech complaint system",
@@ -61,10 +76,10 @@ export function BlogSection() {
     <AnimatedSection className="py-20 px-6 bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Latest Articles</h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Latest Articles & Updates</h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Insights and thoughts on software engineering, machine learning, and the latest technology trends
+            Insights on software engineering, machine learning, and career milestones from articles and LinkedIn updates
           </p>
         </div>
 
@@ -78,10 +93,15 @@ export function BlogSection() {
                   alt={post.title}
                   className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-4 left-4 flex gap-2">
                   <Badge variant="default" className="bg-primary text-primary-foreground">
                     Featured
                   </Badge>
+                  {"platform" in post && post.platform && (
+                    <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm">
+                      {post.platform}
+                    </Badge>
+                  )}
                 </div>
               </div>
               <div className="md:w-1/2 p-8">
@@ -109,8 +129,8 @@ export function BlogSection() {
                 
                 <div className="flex gap-3">
                   <Button asChild>
-                    <a href={post.href} className="flex items-center gap-2">
-                      Read Full Article
+                    <a href={post.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      {"platform" in post && post.platform === "LinkedIn" ? "View on LinkedIn" : "Read Full Article"}
                       <ArrowRight className="h-4 w-4" />
                     </a>
                   </Button>

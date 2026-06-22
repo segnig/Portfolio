@@ -1,11 +1,56 @@
 "use client"
 
-import { Calendar, MapPin, TrendingUp, Users, Award } from "lucide-react"
+import { Calendar, MapPin, TrendingUp, Users, Award, ExternalLink } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { AnimatedSection } from "@/components/animated-section"
 
 const experiences = [
+  {
+    id: 6,
+    title: "Backend Team Lead — A2SV G6",
+    company: "A2SV | Africa to Silicon Valley",
+    location: "Adama Science and Technology University, Ethiopia",
+    period: "2024 - 2025",
+    type: "Fellowship",
+    profileUrl: "https://www.linkedin.com/posts/validresults_a2sv-softwareengineering-backenddevelopment-activity-7411377741888962560-0VLz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFcTFmoBU0wkr3HV9KaJL328t2zrMVcFR6Y",
+    description: "Selected for A2SV's competitive G6 program at ASTU. Started as First Best A2SVian for the Bootcamp, then led the Backend Team for ShopAlly — a distributed microservices shopping assistant. Earned triple recognition at program completion: First Best A2SVian of the Year, Most Consistent Problem Solver, and Outstanding Attendance & Commitment.",
+    achievements: [
+      "Named First Best A2SVian of the Year (2025) at ASTU",
+      "Led Backend Team for ShopAlly, delivering a production-grade Golang microservices system",
+      "Recognized as Most Consistent Problem Solver with Top 10% Zindi rankings and active LeetCode/Codeforces practice"
+    ],
+    technologies: [
+      "Golang",
+      "Backend Architecture",
+      "Microservices",
+      "Competitive Programming",
+      "Team Leadership",
+      "DSA"
+    ]
+  },
+  {
+    id: 5,
+    title: "Global Alumni Ambassador for Ethiopia",
+    company: "WorldQuant University",
+    location: "Adama, Ethiopia",
+    period: "2025 - Present",
+    type: "Alumni Leadership",
+    profileUrl: "https://www.wqu.edu/alumni/ambassadors/ethiopia",
+    description: "Official WorldQuant University Global Alumni Ambassador representing Ethiopia. Listed on WQU's alumni ambassadors page alongside fellow graduates in Addis Ababa. Supports prospective students, strengthens the local WQU community, and promotes access to tuition-free programs in quantitative finance, data science, and AI — building on completion of the Applied Data Science Lab (2024) and Computer Vision Lab (2025).",
+    achievements: [
+      "Featured as official Ethiopia ambassador on WQU's global alumni ambassadors directory",
+      "Representing Ethiopia in WQU's international alumni network for student outreach and community building"
+    ],
+    technologies: [
+      "Alumni Engagement",
+      "Data Science Education",
+      "Quantitative Finance",
+      "Community Building",
+      "Mentorship"
+    ]
+  },
   {
     id: 4,
     title: "Zindi Ambassador for Ethiopia",
@@ -121,12 +166,27 @@ export function ExperienceSection() {
                         <Calendar className="h-4 w-4" />
                         <span>{exp.period}</span>
                       </div>
-                      <Badge
-                        variant="secondary"
-                        className="hover:bg-primary hover:text-primary-foreground transition-colors"
-                      >
-                        {exp.type}
-                      </Badge>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Badge
+                          variant="secondary"
+                          className="hover:bg-primary hover:text-primary-foreground transition-colors"
+                        >
+                          {exp.type}
+                        </Badge>
+                        {"profileUrl" in exp && exp.profileUrl && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            asChild
+                            className="h-7 px-2 text-xs bg-transparent hover:bg-primary hover:text-primary-foreground"
+                          >
+                            <a href={exp.profileUrl} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-3 w-3 mr-1" />
+                              View Profile
+                            </a>
+                          </Button>
+                        )}
+                      </div>
                     </div>
                   </div>
 

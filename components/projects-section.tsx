@@ -9,6 +9,148 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { AnimatedSection } from "@/components/animated-section"
 
 const projects = [
+  {
+    id: 6,
+    title: "Nalack - E-Commerce Platform",
+    description: "Full-stack commerce platform at nalack.com — Node.js/Express API with OTP auth, orders, loyalty, and async workers, powering a live fashion and lifestyle storefront",
+    image: "/projects/nalack.png",
+    tech: [
+      "Node.js", "Express", "PostgreSQL", "Redis", "RabbitMQ",
+      "Docker", "Nginx", "Swagger", "JWT", "Supabase", "Cloudinary"
+    ],
+    github: "https://nalack.com/",
+    demo: "https://nalack.com/",
+    likes: 0,
+    views: 0,
+    date: "2025",
+    details: {
+      overview: "Nalack is a production-grade e-commerce platform serving nalack.com. The backend (Nalack-Backend) is a modular Node.js/Express API with versioned routes under /api/v1, powering user authentication, product catalog, orders, wishlists, discount rules, loyalty processing, and admin analytics. The system runs as a containerized multi-service stack with PostgreSQL migrations, Redis caching, RabbitMQ workers, and Nginx — deployed to production with SSL on Hostinger.",
+      features: [
+        "JWT authentication with OTP verification, refresh-token rotation, and role-based access (CUSTOMER, ADMIN, SUPER_ADMIN)",
+        "Modular REST API: auth, users, products, brands, colors, wishlist, orders, reviews, discounts, and stats",
+        "Background workers: email delivery, loyalty points, special-date reminders, and discount cleanup",
+        "PostgreSQL migrations with full-text product search and stock-calculation PLpgSQL triggers",
+        "Redis caching for OTP storage, token revocation lists, and temporary session state",
+        "RabbitMQ message queuing with dedicated email_queue and graceful fallback handling",
+        "Payment details, order workflows, and first-order discount business logic",
+        "Special dates (birthdays, anniversaries) tied to promotions and loyalty",
+        "Media uploads via Multer, Cloudinary, and Sharp image processing",
+        "Swagger/OpenAPI docs, rate limiting, Helmet security headers, and request tracing",
+        "Docker Compose stack: API, RabbitMQ, Redis, Nginx, and four worker services"
+      ],
+      impact: "Delivered a scalable, production-ready commerce platform with async processing, secure multi-role authentication, loyalty and discount engines, and full API documentation — powering a live e-commerce storefront with reliable order workflows."
+    },
+    backendRole: {
+      role: "Backend Engineer",
+      responsibilities: [
+        "Built modular, versioned REST API using Node.js and Express with feature-based route modules",
+        "Implemented JWT auth with OTP verification, refresh-token rotation, and password reset flows",
+        "Designed PostgreSQL schema with transactional migrations, full-text search, and stock triggers",
+        "Integrated Redis for caching and RabbitMQ for async worker communication",
+        "Developed four background workers: email, loyalty, special-date, and discount cleanup",
+        "Configured Docker Compose multi-service deployment with Nginx reverse proxy and SSL on Hostinger",
+        "Documented API with Swagger/OpenAPI and established Winston/Morgan logging with rate limiting"
+      ],
+      technologies: {
+        languages: ["JavaScript", "PLpgSQL", "Shell"],
+        frameworks: ["Express.js", "Swagger UI"],
+        databases: ["PostgreSQL", "Redis", "Supabase"],
+        infrastructure: ["Docker", "Docker Compose", "Nginx", "RabbitMQ", "Hostinger"],
+        architectures: ["Modular Monolith", "Event-Driven Workers", "Migration-First DB", "REST API"]
+      },
+      achievements: [
+        "Architected multi-service stack with API server and four dedicated background workers",
+        "Implemented secure token rotation with hashed refresh token storage",
+        "Built migration runner with manifest tracking and transactional SQL migrations",
+        "Added database-level full-text search and automated stock quantity calculation",
+        "Deployed production environment with SSL-ready Nginx and automated deploy scripts",
+        "Integrated email delivery via Nodemailer, Resend, and Africa's Talking"
+      ]
+    }
+  },
+  {
+    id: 7,
+    title: "Staygent - Rentals & Services Platform",
+    description: "Full-stack Ethiopian marketplace — Go backend API with layered architecture, plus a Next.js web app for guest, host, and admin flows with KYC, bookings, and an AI travel agent",
+    image: "/projects/staygent.png",
+    tech: [
+      "Go", "Next.js", "React", "TypeScript", "PostgreSQL",
+      "Docker", "Tailwind CSS", "Server Actions", "i18next",
+      "Leaflet", "SSE Streaming", "GitHub Actions", "PM2"
+    ],
+    github: "https://staygent.tech/",
+    demo: "https://staygent.tech/",
+    likes: 0,
+    views: 0,
+    date: "2026",
+    details: {
+      overview: "Staygent is a production platform at staygent.tech connecting guests, hosts, and admins for property rentals and on-demand services in Ethiopia. The system spans a Go backend (staygent-backend) powering core REST APIs and business logic, and a Next.js web frontend (staygent-web) with BFF route handlers, server actions, and real-time AI agent streaming — integrated with separate mobile and blockchain services.",
+      features: [
+        "Go backend with layered architecture: api/, services/, internal/, pkg/, and migrations/",
+        "REST API for auth, listings, bookings, KYC verification, and admin workflows",
+        "Migration-first PostgreSQL schema evolution with PLpgSQL functions",
+        "Next.js App Router frontend with guest, host, and admin dashboards",
+        "Auth flows: login, social login, OTP registration, password reset, mode switching, and KYC",
+        "Rentals and services listings with geo search, filtering, pagination, and taxonomy loading",
+        "AI travel agent with SSE-streamed responses, session init, and approval flows",
+        "Admin analytics: KYC queue, listings/bookings stats, and activity logs",
+        "BFF route handlers for session management, cookie refresh, and translation",
+        "Real-time notifications via WebSocket; i18n with locale parity CI checks",
+        "Containerized deployment: Docker Compose, Makefile, Air hot-reload, and PM2/systemd"
+      ],
+      impact: "Built and shipped a full-stack platform modernizing rentals and services in Ethiopia — combining a scalable Go API backend with a production Next.js frontend, AI-assisted discovery, and automated CI/CD across both services."
+    },
+    backendRole: {
+      role: "Backend Engineer",
+      responsibilities: [
+        "Developed core platform APIs in Go with clean separation across api/, services/, and internal/ packages",
+        "Implemented REST endpoints for auth, listings, bookings, KYC, and admin verification workflows",
+        "Designed migration-first database evolution with PostgreSQL and PLpgSQL functions",
+        "Structured reusable packages in pkg/ and enforced encapsulation via internal/ boundaries",
+        "Set up Docker, docker-compose, Makefile, and deploy.sh for repeatable builds and deployments",
+        "Maintained environment-driven configuration and operational scripts for production rollout"
+      ],
+      technologies: {
+        languages: ["Go", "PLpgSQL", "Shell", "Python"],
+        frameworks: ["Go modules", "REST API"],
+        databases: ["PostgreSQL"],
+        infrastructure: ["Docker", "Docker Compose", "Makefile", "Air"],
+        architectures: ["Layered Monolith", "Migration-First DB", "Container-First Deployment"]
+      },
+      achievements: [
+        "Architected conventional Go backend layout with cmd/, api/, services/, internal/, and pkg/",
+        "Built admin and verification workflow support with dedicated test artifacts",
+        "Established container-first deployment with Docker Compose and scripted rollout",
+        "Contributed 113+ commits across auth, services, and infrastructure domains",
+        "Maintained active development with multi-contributor collaboration on main branch"
+      ]
+    },
+    frontendRole: {
+      role: "Frontend Engineer",
+      responsibilities: [
+        "Built guest, host, and admin experiences on Next.js App Router with TypeScript",
+        "Implemented server actions for auth mutations, session transitions, and KYC flows",
+        "Designed typed API client with Result<T> envelope parsing and centralized error handling",
+        "Developed listings pages with geo search, filters, and pagination for rent and services",
+        "Integrated AI agent chat with SSE streaming and session/approval management",
+        "Set up middleware-based route protection, i18n, and CI/CD deployment pipeline"
+      ],
+      technologies: {
+        languages: ["TypeScript", "JavaScript"],
+        frameworks: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+        libraries: ["i18next", "Leaflet", "Recharts", "Radix UI", "date-fns"],
+        infrastructure: ["GitHub Actions", "PM2", "systemd"],
+        architectures: ["App Router", "Server Actions", "BFF Routes", "SSE Streaming"]
+      },
+      achievements: [
+        "Architected feature-rich App Router tree with centralized lib/ domain layer",
+        "Implemented middleware cookie checks and redirect rules for protected routes",
+        "Built provider-heavy client composition for auth, notifications, and status modals",
+        "Established CI quality gates: lint, typecheck, locale parity, and build verification",
+        "Automated production deployment with health checks on push to main"
+      ]
+    }
+  },
    {
     id: 5,
     title: "ShopAlly - AI-Powered Shopping Assistant",

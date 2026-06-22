@@ -32,6 +32,7 @@ type Achievement = {
   issuer: string
   date: string
   category: string
+  profileUrl?: string
   skills: string[]
   details: {
     overview: string
@@ -41,6 +42,36 @@ type Achievement = {
 }
 
 const certificates: Certificate[] = [
+{
+  id: 8,
+  title: "First Best A2SVian of the Year (2025)",
+  description:
+    "Triple award recognition at A2SV G6 — overall excellence, most consistent problem solver, and outstanding attendance at Adama Science and Technology University.",
+  image: "/certificates/a2sv-best-a2svian-of-the-year-2025.jpg",
+  issuer: "A2SV | Africa to Silicon Valley",
+  date: "2025",
+  credentialUrl: "https://www.linkedin.com/posts/validresults_a2sv-softwareengineering-backenddevelopment-activity-7411377741888962560-0VLz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFcTFmoBU0wkr3HV9KaJL328t2zrMVcFR6Y",
+  skills: [
+    "Backend Leadership",
+    "Competitive Programming",
+    "Problem Solving",
+    "Team Leadership",
+    "DSA"
+  ],
+  details: {
+    overview:
+      "Named First Best A2SVian of the Year (2025) at ASTU after leading the ShopAlly backend team and demonstrating consistent excellence throughout the A2SV G6 program.",
+    highlights: [
+      "First Best A2SVian of the Year (2025)",
+      "Most Consistent Problem Solver",
+      "Outstanding Attendance & Commitment",
+      "First Best A2SVian for the Bootcamp",
+      "Backend Team Lead for ShopAlly"
+    ],
+    impact:
+      "Recognized with A2SV's highest honors for technical leadership, algorithmic discipline, and commitment across the G6 program."
+  }
+},
 {
   id: 7,
   title: "Applied AI Lab: Deep Learning for Computer Vision",
@@ -268,10 +299,68 @@ const certificates: Certificate[] = [
 
 const achievements: Achievement[] = [
   {
+    id: 6,
+    title: "First Best A2SVian of the Year (2025)",
+    description: "Triple award winner at A2SV G6 — overall excellence, most consistent problem solver, and outstanding attendance at ASTU",
+    image: "/certificates/a2sv-best-a2svian-of-the-year-2025.jpg",
+    issuer: "A2SV | Africa to Silicon Valley",
+    date: "2025",
+    category: "Leadership & Excellence",
+    profileUrl: "https://www.linkedin.com/posts/validresults_a2sv-softwareengineering-backenddevelopment-activity-7411377741888962560-0VLz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFcTFmoBU0wkr3HV9KaJL328t2zrMVcFR6Y",
+    skills: [
+      "Backend Leadership",
+      "Competitive Programming",
+      "Problem Solving",
+      "Team Leadership",
+      "DSA"
+    ],
+    details: {
+      overview:
+        "Named First Best A2SVian of the Year (2025) at Adama Science and Technology University after a year defined by technical growth, leadership, and consistency. Previously recognized as First Best A2SVian for the Bootcamp and led the Backend Team for the ShopAlly development project during A2SV G6.",
+      highlights: [
+        "First Best A2SVian of the Year (2025) — overall excellence",
+        "Most Consistent Problem Solver — discipline in DSA across LeetCode and Codeforces",
+        "Outstanding Attendance & Commitment throughout the G6 program",
+        "Led ShopAlly backend team, turning complex architectural challenges into a working product",
+        "Ranked in Top 10% on Zindi competitive data science challenges"
+      ],
+      impact:
+        "Validated a year of resilience and results in backend engineering, algorithmic problem-solving, and team leadership — earning recognition across A2SV's highest honors at ASTU."
+    }
+  },
+  {
+    id: 5,
+    title: "WQU Global Alumni Ambassador for Ethiopia",
+    description: "Official WorldQuant University alumni ambassador representing Ethiopia on the global ambassadors network",
+    image: "/certificates/applied-data-science-lab.2.png",
+    issuer: "WorldQuant University",
+    date: "2025",
+    category: "Alumni Leadership",
+    profileUrl: "https://www.wqu.edu/alumni/ambassadors/ethiopia",
+    skills: [
+      "Alumni Engagement",
+      "Data Science Education",
+      "Quantitative Finance",
+      "Community Building",
+      "Mentorship"
+    ],
+    details: {
+      overview:
+        "Selected as a Global Alumni Ambassador for Ethiopia by WorldQuant University. Listed on the official WQU alumni ambassadors page, representing Adama alongside fellow ambassadors in Addis Ababa. Builds on completion of the Applied Data Science Lab (2024) and Computer Vision Lab (2025).",
+      highlights: [
+        "Featured on WQU's Ethiopia ambassadors directory at wqu.edu",
+        "Supports prospective students and strengthens the local WQU alumni community",
+        "Promotes tuition-free programs in data science, AI, and quantitative finance"
+      ],
+      impact:
+        "Extended WQU education impact beyond coursework by serving as a community leader and ambassador for quantitative and data science learning in Ethiopia."
+    }
+  },
+  {
     id: 1,
     title: "Eighth Place – 2024 ICPC Ethiopian Collegiate Programming Contest",
     description: "Awarded for competitive programming skills at the collegiate level",
-    image: "Achievements/icpc-ethiopia-2024.png", 
+    image: "/Achievements/icpc-ethiopia-2024.png", 
     issuer: "International Collegiate Programming Contest (ICPC)",
     date: "Oct 28-29, 2024",
     category: "Competitive Programming",
@@ -292,7 +381,7 @@ const achievements: Achievement[] = [
     id: 3,
     title: "African Credit Scoring Challenge",
     description: "Ranked 19th out of 900 participants in a financial data prediction competition",
-    image: "Achievements/african-credit-scoring-challenge.png",
+    image: "/Achievements/african-credit-scoring-challenge.png",
     issuer: "Zindi",
     date: "Jan 13, 2025",
     category: "Data Science Competition",
@@ -313,7 +402,7 @@ const achievements: Achievement[] = [
    id: 4,
    title: "21st Place – International Women's Day Challenge 2025",
    description: "Predicted women-headed households living below an income threshold in a data science competition",
-   image: "Achievements/valid-International Women's Day Challenge.png",
+   image: "/Achievements/valid-International Women's Day Challenge.png",
    issuer: "Zindi Africa",
    date: "Mar 7–31, 2025",
    category: "Data Science & Predictive Modeling",
@@ -420,6 +509,19 @@ export function CertificateAchievementSection() {
                       <a href={item.credentialUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-1" />
                         View Credential
+                      </a>
+                    </Button>
+                  )}
+                  {activeTab === "achievements" && !isCertificate(item) && (item as Achievement).profileUrl && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      asChild
+                      className="bg-transparent hover:bg-primary hover:text-primary-foreground"
+                    >
+                      <a href={(item as Achievement).profileUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-1" />
+                        View Profile
                       </a>
                     </Button>
                   )}

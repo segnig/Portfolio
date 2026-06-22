@@ -4,7 +4,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import { AnimatedCounter } from "@/components/animated-counter"
 
 export function AboutSection() {
-  const highlights = ["3+ years experience", "Backend development", "ML/AI expertise", "Open source contributor", "Community mentor", "Data-driven solutions"]
+  const highlights = ["3+ years experience", "WQU Alumni Ambassador", "Backend development", "ML/AI expertise", "Community mentor", "Data-driven solutions"]
 
   const stats = [
     { label: "Projects Completed", value: 50, suffix: "+" },
@@ -54,8 +54,9 @@ export function AboutSection() {
                 I thrive on solving challenging problems and building systems that make a meaningful impact.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                When I'm not coding, you'll find me contributing to open source projects, exploring the latest in AI
-                research, or mentoring aspiring developers in the tech community.
+                When I'm not coding, you'll find me contributing to open source projects, serving as a
+                WorldQuant University Global Alumni Ambassador for Ethiopia, or mentoring aspiring developers
+                in the tech community.
               </p>
             </div>
 
