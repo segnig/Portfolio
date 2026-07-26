@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { AnimatedSection } from "@/components/animated-section"
+import { ProjectPreview } from "@/components/project-preview"
 
 const projects = [
   {
@@ -18,7 +19,7 @@ const projects = [
       "Node.js", "Express", "PostgreSQL", "Redis", "RabbitMQ",
       "Docker", "Nginx", "Swagger", "JWT", "Supabase", "Cloudinary"
     ],
-    github: "https://nalack.com/",
+    github: "https://github.com/segnig/Nalack-Backend",
     demo: "https://nalack.com/",
     likes: 0,
     views: 0,
@@ -78,8 +79,8 @@ const projects = [
       "Docker", "Tailwind CSS", "Server Actions", "i18next",
       "Leaflet", "SSE Streaming", "GitHub Actions", "PM2"
     ],
-    github: "https://staygent.tech/",
-    demo: "https://staygent.tech/",
+    github: "https://www.staygent.tech/",
+    demo: "https://www.staygent.tech/",
     likes: 0,
     views: 0,
     date: "2026",
@@ -341,24 +342,24 @@ export function ProjectsSection() {
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="relative overflow-hidden">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                <ProjectPreview
+                  url={project.demo || project.github}
+                  fallbackImage={project.image || "/placeholder.svg"}
+                  title={project.title}
+                  className="w-full aspect-[16/10]"
                 />
-                <div className="absolute top-4 right-4 flex gap-2">
-                  <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
-                    {project.date}
-                  </Badge>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
               <div className="p-6">
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="font-heading text-xl font-semibold group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
+                  <div>
+                    <span className="text-[11px] font-medium text-primary tracking-wider uppercase bg-primary/10 px-2 py-0.5 rounded">
+                      {project.date}
+                    </span>
+                    <h3 className="font-heading text-xl font-semibold group-hover:text-primary transition-colors mt-2">
+                      {project.title}
+                    </h3>
+                  </div>
                   <Button
                     variant="ghost"
                     size="sm"
@@ -436,10 +437,12 @@ export function ProjectsSection() {
                           <DialogTitle className="text-2xl font-heading">{project.title}</DialogTitle>
                         </DialogHeader>
                         <div className="space-y-6">
-                          <img
-                            src={project.image || "/placeholder.svg"}
-                            alt={project.title}
-                            className="w-full h-64 object-cover rounded-lg"
+                          <ProjectPreview
+                            url={project.demo || project.github}
+                            fallbackImage={project.image || "/placeholder.svg"}
+                            title={project.title}
+                            className="w-full aspect-[16/10] rounded-lg"
+                            interactive={true}
                           />
                           <div>
                             <h4 className="font-semibold mb-2">Overview</h4>
