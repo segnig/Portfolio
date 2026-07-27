@@ -152,14 +152,14 @@ const projects = [
       ]
     }
   },
-   {
+  {
     id: 5,
     title: "ShopAlly - AI-Powered Shopping Assistant",
     description: "Distributed microservices architecture with Golang backend, LLM integration, MongoDB, and visual search capabilities",
     image: "/projects/shopally-shopping-assistant.png",
     tech: [
-      "Golang", "Gin Framework", "LLM", "Distributed Systems", "Microservices", 
-      "MongoDB", "Docker","Redis", "Next.js", "Flutter", "WebSocket", "REST API"
+      "Golang", "Gin Framework", "LLM", "Distributed Systems", "Microservices",
+      "MongoDB", "Docker", "Redis", "Next.js", "Flutter", "WebSocket", "REST API"
     ],
     github: "https://github.com/A2SV/g6-shopally",
     demo: "https://shop-ally-ai.vercel.app",
@@ -326,10 +326,9 @@ export function ProjectsSection() {
   return (
     <AnimatedSection id="projects" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
-          <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tight">My Ultimate Set of <br className="hidden md:block" /> <span className="text-primary">Featured Projects</span></h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             A showcase of innovative solutions spanning AI, distributed systems, and blockchain technology
           </p>
         </div>
@@ -338,7 +337,7 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <Card
               key={project.id}
-              className="group overflow-hidden hover:shadow-xl transition-all duration-500 animate-fade-up hover:-translate-y-2"
+              className="group overflow-hidden hover:shadow-[0_0_30px_rgba(0,102,255,0.15)] transition-all duration-500 animate-fade-up hover:-translate-y-2 bg-card border-white/5 rounded-2xl relative before:absolute before:inset-0 before:pointer-events-none before:bg-gradient-to-b before:from-white/5 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity z-10"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="relative overflow-hidden">
@@ -367,11 +366,10 @@ export function ProjectsSection() {
                     className="p-1 h-auto animate-scale-hover"
                   >
                     <Heart
-                      className={`h-5 w-5 transition-all duration-300 ${
-                        likedProjects.has(project.id)
+                      className={`h-5 w-5 transition-all duration-300 ${likedProjects.has(project.id)
                           ? "fill-red-500 text-red-500 scale-125 animate-pulse"
                           : "text-muted-foreground hover:text-red-500 hover:scale-110"
-                      }`}
+                        }`}
                     />
                   </Button>
                 </div>

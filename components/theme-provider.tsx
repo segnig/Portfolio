@@ -14,7 +14,7 @@ interface ThemeContextType {
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = React.useState<Theme>("light")
+  const [theme, setTheme] = React.useState<Theme>("dark")
   const [mounted, setMounted] = React.useState(false)
 
   React.useEffect(() => {
