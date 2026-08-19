@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     shortcut: "/my-logo.png",
     apple: "/my-logo.png",
   },
+  verification: {
+    google: "oBav_ZZ3Onu8MdGp2ICJFxUwpIYCDUztPJDvAPBUKmg",
+  },
 }
 
 
